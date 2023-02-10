@@ -1,8 +1,7 @@
-
+import BackgroundImageDesktop from './images/background-home-desktop.jpg';
 const App = () => {
   return (
-    <div className="App">
-
+    <div className="App" style={{backgroundImage: `url(${BackgroundImageDesktop})`}}>
     </div>
   );
 }
