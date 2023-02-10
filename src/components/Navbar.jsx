@@ -1,19 +1,19 @@
-import React from 'react';
+import Logo from '../images/logo.svg';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
   return (
     <header className='header'>
       <div className='logo'>
-        <h1>
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF" /><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z" /></g></svg>
-        </h1>
+        <img src = {Logo} alt = 'Logo' />
       </div>
+      <div className='hr'></div>
       <nav>
         <ul>
-          <li><h1>00</h1><p>HOME</p></li>
-          <li><h1>01</h1><p>DESTINATION</p></li>
-          <li><h1>02</h1><p>CREW</p></li>
-          <li><h1>03</h1><p>TECHNOLOGY</p></li>
+          <li><p>00</p><span>HOME</span></li>
+          <li><p>01</p><span>DESTINATION</span></li>
+          <li><p>02</p><span>CREW</span></li>
+          <li><p>03</p><span>TECHNOLOGY</span></li>
         </ul>
       </nav>
     </header>
