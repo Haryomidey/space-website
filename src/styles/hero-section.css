@@ -1,0 +1,83 @@
+.hero-section{
+    padding-top: 250px;
+}
+
+.hero-section-main{
+    width: 100%;
+}
+
+.hero-section .hero-section-main h2{
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #ccc;
+}
+
+.hero-section .hero-section-main h1{
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    padding-top: 15px;
+    font-weight: 500;
+    letter-spacing: 10px;
+}
+
+.hero-section .hero-section-main p{
+    width: 70%;
+    padding-top: 20px;
+    line-height: 25px;
+    color: #979c9c;
+}
+
+.explore{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore p{
+    color: rgba(0, 0, 0, 0.815);
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width: 1000px){
+    .hero-section{
+        padding-top: 150px;
+        min-height: 150vh;
+    }
+
+    .hero-section-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .hero-section .hero-section-main h1{
+        font-size: 8.5rem;
+    }
+
+    .hero-section aside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .hero-section .hero-section-main h2{
+        font-size: 1.3rem;
+    }
+
+     .hero-section .hero-section-main h1{
+        font-size: 5.5rem;
+    }
+
+    .hero-section .hero-section-main p{
+        width: 100%;
+    }
+}

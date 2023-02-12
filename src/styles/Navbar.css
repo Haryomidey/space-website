@@ -1,11 +1,18 @@
 header{
+    width: 100%;
     height: 100px;
     padding: 30px;
     padding-top: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+header.active{
+    color: red;
 }
 
 header .logo img{
@@ -44,9 +51,125 @@ nav ul li{
     display: inline-flex;
     align-items: center;
     gap: 15px;
-    color: white;
 }
 
-nav ul li p, span{
+header nav ul li a{
+    display: flex;
+    gap: 8px;
+    color: white;
+    position: relative;
+}
+
+nav ul li a p{
+    font-weight: 800;
+}
+
+nav ul li a p, span{
     font-size: .8rem;
+}
+
+nav ul li a p span{
+    font-weight: normal;
+}
+    
+header nav ul li a.active::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    bottom: -115%;
+}
+
+.menu-close-open{
+    display: none;
+}
+
+@media screen and (max-width: 1280px){
+    header .hr{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    header{
+        padding-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 880px){
+    header{
+        padding-right: 0;
+    }
+    nav{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 650px){
+
+    nav{
+        height: 60px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.579);
+        margin-left: -100%;
+        transition: margin-left 0.5s;
+    }
+
+    nav.active{
+        margin-left: 0;
+    }
+
+    nav ul{
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        width: 50%;
+        padding-top: 40px;
+        padding-left: 20px;
+    }
+
+    header nav ul li a{
+        color: black;
+    }
+
+
+   .menu-close-open{
+        display: block;
+        z-index: 11;
+        padding-right: 20px;
+        cursor: pointer;
+    }
+
+    .open-menu.active{
+        display: none;
+    }
+
+    .close-menu{
+        display: none;
+    }
+
+    .close-menu.active{
+        display: block;
+    }
+
+    header nav ul li a.active::after{
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: rgb(6, 6, 6);
+        bottom: -50%;
+    }
+
 }
